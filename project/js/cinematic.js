@@ -127,7 +127,6 @@ export function initCinematic({ orrery, studio, chamber }) {
       if (orrery && orrery.setProgress) orrery.setProgress(cinemaT);
       if (copy) {
         const main = copy.querySelector(".stage-copy-main");
-        const sub = copy.querySelector(".hero-sub");
         const extras = copy.querySelectorAll(".hero-cast, .hero-pills");
         const fadeTitle = 1 - Math.min(1, cinemaT / 0.46);
         const fadeSide = 1 - Math.min(1, cinemaT / 0.3);
@@ -135,7 +134,6 @@ export function initCinematic({ orrery, studio, chamber }) {
           main.style.opacity = String(fadeTitle);
           main.style.transform = `translate3d(0, ${cinemaT * -40}px, 0)`;
         }
-        if (sub) sub.style.opacity = String(fadeSide);
         extras.forEach((el) => { el.style.opacity = String(fadeSide); });
         const cue = copy.querySelector(".hero-scrollcue");
         if (cue) cue.style.opacity = String(1 - Math.min(1, cinemaT / 0.22));

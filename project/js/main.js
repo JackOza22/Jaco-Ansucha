@@ -8,7 +8,7 @@
 import { initOrrery } from "./orrery.js?v=58";
 import { initStudio } from "./studio.js?v=34";
 import { initChamber } from "./chamber.js?v=53";
-import { initCinematic } from "./cinematic.js?v=51";
+import { initCinematic } from "./cinematic.js?v=52";
 import { initLearn } from "./learn.js?v=48";
 
 const PHOTO_V = "v=57";
