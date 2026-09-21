@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaco &amp; Anuscha, Governess and Instructional Designer</title>
+<meta name="description" content="Two educators. Two disciplines. No fixed address. A complete education, built around your child.">
+<meta property="og:title" content="Jaco &amp; Anuscha, Governess and Instructional Designer">
+<meta property="og:description" content="Two educators. Two disciplines. No fixed address. A complete education, built around your child.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A0B10">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='8' fill='%23221D17'/%3E%3Cellipse cx='50' cy='50' rx='44' ry='18' fill='none' stroke='%23A67C3D' stroke-width='4' transform='rotate(-20 50 50)'/%3E%3Cellipse cx='50' cy='50' rx='30' ry='30' fill='none' stroke='%233F5C44' stroke-width='4' transform='rotate(40 50 50)'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=61">
+<link rel="stylesheet" href="css/cinematic.css?v=88">
+</head>
+<body class="is-loading">
+
+<a class="skip-link" href="#model">Skip to main content</a>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-sprockets" aria-hidden="true"></div>
+  <p class="loader-kicker" id="loaderKicker"></p>
+  <p class="loader-take" id="loaderTake"></p>
+  <p class="loader-mark" id="loaderMark"></p>
+  <p class="loader-count" id="loaderCount">00</p>
+  <div class="loader-bar" aria-hidden="true"><span id="loaderBar"></span></div>
+  <p class="loader-line" id="loaderLine"></p>
+  <button type="button" class="loader-skip" id="loaderSkip"></button>
+</div>
+
+<div class="cursor" id="cursor" hidden>
+  <span class="cursor-dot"></span>
+  <span class="cursor-ring"></span>
+</div>
+<div class="grade" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="scratches" aria-hidden="true"></div>
+<div class="flash" id="sceneFlash" aria-hidden="true"></div>
+<div class="dissolve" aria-hidden="true"></div>
+<div class="letterbox" aria-hidden="true"><span></span><span></span></div>
+<div class="gate" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="slate" id="slate" aria-hidden="true">
+  <span class="slate-scene" id="slateScene">01</span>
+  <span class="slate-title" id="slateTitle"></span>
+  <span class="slate-time" id="slateTime">00:00:00</span>
+</div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<p class="keys-hint" id="keysHint" hidden></p>
+<p class="hold" id="hold" hidden></p>
+<div class="chapters" id="chapters" hidden>
+  <p class="chapters-kicker" id="chaptersKicker"></p>
+  <ol class="chapter-list" id="chapterList"></ol>
+  <button type="button" class="chapters-close" id="chaptersClose"></button>
+</div>
+
+<header class="topbar topbar--night" id="topbar">
+  <div class="topbar-left">
+    <a class="wordmark" href="#top">J&nbsp;&amp;&nbsp;A</a>
+    <div class="film-tools">
+      <button type="button" class="film-tool" id="soundToggle" aria-pressed="false"></button>
+      <button type="button" class="film-tool" id="chaptersToggle"></button>
+    </div>
+  </div>
+  <nav class="topnav" id="topnav" aria-label="Primary"></nav>
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="topnav" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <section class="cinema" id="model">
+    <div class="cinema-pin">
+      <div class="stage-3d" id="orreryStage" tabindex="0">
+        <canvas id="orreryCanvas" aria-hidden="true"></canvas>
+        <div class="orrery-vignette" aria-hidden="true"></div>
+        <div class="stage-flare" aria-hidden="true"></div>
+        <div class="stage-light" aria-hidden="true"></div>
+        <div class="stage-chroma" aria-hidden="true"></div>
+        <div class="entry-veil" id="entryVeil" aria-hidden="true"></div>
+        <div class="starfield" aria-hidden="true"></div>
+        <div class="dust" aria-hidden="true"></div>
+      </div>
+      <div class="stage-copy" id="stageCopy">
+        <div class="stage-copy-main">
+          <p class="eyebrow" id="heroEyebrow"></p>
+          <h1 id="heroHeading"></h1>
+        </div>
+        <p class="hero-sub" id="heroSub"></p>
+        <ul class="hero-cast" id="heroCast"></ul>
+        <ul class="hero-pills" id="heroPills"></ul>
+        <div class="hero-scrollcue">
+          <span id="heroScrollCue"></span>
+          <svg width="14" height="22" viewBox="0 0 14 22" fill="none" aria-hidden="true"><path d="M7 1v18M1 13l6 6 6-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <div class="globe-tools" id="globeTools">
+        <p class="globe-caption" id="globeCaption"></p>
+        <label class="globe-dn">
+          <span id="globeNightLabel">Night</span>
+          <input type="range" id="globeDayNight" min="0" max="100" value="42" aria-label="Day and night">
+          <span id="globeDayLabel">Day</span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <section class="problem title-card" id="problem" data-reveal data-edu>
+    <h2 id="problemHeading"></h2>
+    <p class="problem-lead" id="problemLead"></p>
+    <p class="problem-body" id="problemBody"></p>
+    <div class="problem-split" id="problemPhotos"></div>
+  </section>
+
+  <section class="alternative" id="alternative" data-reveal>
+    <h2 id="alternativeHeading"></h2>
+    <p class="alternative-intro" id="alternativeIntro"></p>
+    <p class="alternative-body" id="alternativeBody"></p>
+    <p class="alternative-close" id="alternativeClose"></p>
+    <div class="work-pair" id="workPair"></div>
+  </section>
+
+  <section class="classroom" id="classroom" data-reveal data-edu>
+    <h2 id="classroomHeading"></h2>
+    <p class="classroom-intro" id="classroomIntro"></p>
+    <div class="curriculum" id="curriculum">
+      <p class="curriculum-kicker" id="curriculumKicker"></p>
+      <p class="curriculum-hint" id="curriculumHint"></p>
+      <div class="curriculum-board">
+        <ul class="curriculum-list" id="curriculumList" role="list"></ul>
+        <article class="curriculum-detail" id="curriculumDetail" aria-live="polite"></article>
+      </div>
+    </div>
+    <div class="day" id="day">
+      <div class="day-pin">
+        <p class="day-clock" id="dayClock"></p>
+        <ol class="rhythm" id="rhythm"></ol>
+      </div>
+    </div>
+    <div class="ledger">
+      <div class="ledger-col ledger-col--anuscha" data-person="anuscha">
+        <h3 id="classroomAnuschaName"></h3>
+        <div id="classroomAnuschaRows"></div>
+      </div>
+      <div class="ledger-divider" aria-hidden="true"></div>
+      <div class="ledger-col ledger-col--jaco" data-person="jaco">
+        <h3 id="classroomJacoName"></h3>
+        <div id="classroomJacoRows"></div>
+      </div>
+    </div>
+    <p class="classroom-result" id="classroomResult"></p>
+  </section>
+
+  <section class="people people--cast" id="people">
+    <header class="cast-slate">
+      <p class="cast-slate-kicker" id="peopleKicker"></p>
+      <h2 class="cast-slate-title" id="peopleHeading"></h2>
+    </header>
+    <article class="person person--anuscha" id="personAnuscha" data-person="anuscha"></article>
+    <article class="person person--jaco" id="personJaco" data-person="jaco"></article>
+  </section>
+
+  <section class="studio" id="studio" data-reveal>
+    <p class="eyebrow" id="studioEyebrow"></p>
+    <h2 id="studioHeading"></h2>
+    <p class="studio-intro" id="studioIntro"></p>
+    <figure class="classroom-still" id="classroomStill">
+      <img id="classroomStillImg" alt="A laptop open on a desk, with software code on the screen" src="assets/photos/lesson-tech.jpg" width="2000" height="1333">
+      <figcaption id="classroomStillCap"></figcaption>
+    </figure>
+    <div class="learn-stage" id="learnStage">
+      <canvas class="learn-bg" id="learnBg" aria-hidden="true"></canvas>
+      <div class="learn-veil" aria-hidden="true"></div>
+      <div class="learn-stage-copy">
+        <p class="learn-kicker" id="learnKicker"></p>
+        <p class="learn-lead" id="learnLead"></p>
+      </div>
+      <div class="lms" id="learnApp" aria-label="Learning app preview"></div>
+    </div>
+    <div class="studio-proof">
+      <ul class="studio-notes" id="studioNotes"></ul>
+      <div class="studio-lab">
+        <div class="studio-stage">
+          <p class="studio-stage-kicker">Life sciences · flowering plant</p>
+          <canvas id="studioCanvas" aria-hidden="true"></canvas>
+        </div>
+        <div class="studio-panel">
+          <p class="studio-demo-prompt" id="studioPrompt"></p>
+          <p class="studio-score" id="studioScore"></p>
+          <p class="studio-question" id="studioQuestion"></p>
+          <ul class="studio-choices" id="studioChoices" role="list"></ul>
+          <div class="studio-tools">
+            <button type="button" id="studioExplode">Pull apart</button>
+            <button type="button" id="studioWater">Trace water</button>
+            <button type="button" id="studioReset">Reset view</button>
+          </div>
+          <div class="studio-detail" id="studioDetail" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chamber" id="chamber">
+    <div class="chamber-pin">
+      <div class="chamber-stage" id="chamberStage">
+        <canvas id="chamberCanvas" aria-hidden="true"></canvas>
+        <div class="chamber-labels" id="chamberLabels"></div>
+        <div class="chamber-gate" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="chamber-copy">
+        <p class="chamber-kicker" id="chamberKicker"></p>
+        <h2 id="chamberHeading"></h2>
+        <p id="chamberBody"></p>
+        <p class="chamber-hint" id="chamberHint"></p>
+      </div>
+      <aside class="chamber-dock">
+        <div class="chamber-models" id="chamberModels" role="tablist" aria-label="Specimens"></div>
+        <article class="chamber-fact" id="chamberFact" aria-live="polite"></article>
+        <div class="chamber-tools">
+          <button type="button" class="chamber-tool" id="chamberExplode"></button>
+          <button type="button" class="chamber-tool" id="chamberAssemble"></button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="together" id="together" data-reveal data-edu>
+    <p class="together-kicker" id="togetherKicker"></p>
+    <h2 id="togetherHeading"></h2>
+    <div class="together-copy" id="togetherCopy"></div>
+    <div class="together-reel" id="togetherReel" aria-label="Photos of Jaco and Anuscha"></div>
+  </section>
+
+  <section class="experience" id="experience" data-reveal>
+    <h2>Experience</h2>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <section class="testimonials" id="references" data-reveal>
+    <h2>References</h2>
+    <p class="testimonials-intro" id="testimonialsIntro"></p>
+    <div class="testimonial-grid" id="testimonialGrid"></div>
+    <div class="faq" id="faq"></div>
+  </section>
+
+  <section class="moments" id="moments" data-reveal>
+    <h2>Moments</h2>
+    <p class="moments-intro">A field record of the work: the classroom, the outings, and the lives we live between lessons.</p>
+    <div class="gallery-tools" id="galleryTools" role="tablist" aria-label="Filter photographs"></div>
+    <div class="gallery-stage">
+      <button type="button" class="gallery-hero" id="galleryHero" hidden></button>
+      <div class="gallery-grid" id="filmstrip" tabindex="0" aria-label="Photo and video gallery"></div>
+    </div>
+  </section>
+
+  <section class="closing" id="contact" data-reveal>
+    <h2 id="closingLine"></h2>
+    <p id="closingSub"></p>
+    <div class="contact-cards">
+      <article class="contact-card contact-card--jaco" id="contactJaco" data-person="jaco" data-magnetic></article>
+      <article class="contact-card contact-card--anuscha" id="contactAnuscha" data-person="anuscha" data-magnetic></article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="sitefoot">
+  <p class="credits-marquee" aria-hidden="true"><span id="creditsLine"></span></p>
+  <p>Anuscha van Niekerk &amp; Jaco van Dyk · Governess and instructional designer, applying jointly</p>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close">Close</button>
+  <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev"></button>
+  <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext"></button>
+  <figure class="lightbox-figure">
+    <p class="lightbox-index" id="lightboxIndex"></p>
+    <img id="lightboxImg" alt="">
+    <video id="lightboxVideo" controls playsinline></video>
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script src="js/content.js?v=79"></script>
+<script type="module" src="js/main.js?v=92"></script>
+</body>
+</html>

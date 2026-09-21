@@ -1,0 +1,29 @@
+Give someone the whole folder named "Jaco-and-Anuscha-Portfolio"
+(or the zip). Do not send only index.html - the site needs every file,
+including Jaco-and-Anuscha.exe.
+
+WINDOWS (double-click the exe)
+1. Unzip if needed, then open the folder.
+2. Double-click Jaco-and-Anuscha.exe
+3. If Windows says "Windows protected your PC", click More info, then Run anyway.
+4. A black window opens and then the browser. Keep the black window open.
+5. The address is usually http://127.0.0.1:8000
+   If that port is busy it uses 8765, 5500, 9000, or 18000.
+   Use the address printed in the black window.
+6. Close the black window when you are done.
+
+You can also double-click START-WINDOWS.bat. It runs the same exe.
+
+If the browser says "This site can't be reached":
+- Copy the whole folder again (do not copy only the exe).
+- Do not double-click index.html.
+- Keep the black window open. Closing it stops the site.
+- If SmartScreen blocks the exe, choose Run anyway.
+
+MAC
+1. Double-click START-MAC.command
+2. If macOS blocks it: right-click the file, then Open, then Open
+3. Keep the Terminal window open while you show the site.
+
+The site is fully offline - no internet required on the other computer.
+The 3D classroom will not work if you open index.html directly.
