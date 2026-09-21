@@ -3,3 +3,10 @@ Thumbs.db
 project/_source/
 *.log
 portable/
+
+# Photos pulled from the site because the blur covers Jaco or Anuscha
+project/assets/photos/group-outing.jpg
+project/assets/photos/karting-together.jpg
+project/assets/photos/outing-table.jpg
+project/assets/photos/theatre-seats.jpg
+project/assets/photos/together-home.jpg
