@@ -551,17 +551,28 @@ function initChamber(canvas, spec, onPart) {
     if (!downPos) return;
     const dx = e.clientX - downPos.x;
     const dy = e.clientY - downPos.y;
-    if (Math.hypot(dx, dy) > 6) dragging = true;
+    if ((e.pointerType === "touch" || e.pointerType === "pen") && !dragging) {
+      if (Math.abs(dy) > 8 && Math.abs(dy) >= Math.abs(dx)) {
+        downPos = null;
+        holding = false;
+        return;
+      }
+      if (Math.abs(dx) < 14) return;
+      dragging = true;
+      try { canvas.setPointerCapture(e.pointerId); } catch (_) {}
+    } else if (Math.hypot(dx, dy) > 6) {
+      dragging = true;
+    }
     if (dragging) {
       spinY = dragY + dx * 0.008;
       spinX = THREE.MathUtils.clamp(dragX + dy * 0.004, -0.7, 0.7);
     }
   }, { passive: true });
   canvas.addEventListener("pointerdown", (e) => {
-    holding = true;
+    holding = e.pointerType !== "touch" && e.pointerType !== "pen";
     dragging = false;
     downPos = { x: e.clientX, y: e.clientY };
-    canvas.setPointerCapture(e.pointerId);
+    if (holding) canvas.setPointerCapture(e.pointerId);
   });
   canvas.addEventListener("pointerup", (e) => {
     holding = false;

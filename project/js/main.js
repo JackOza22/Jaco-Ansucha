@@ -5,9 +5,9 @@
  * All copy comes from CONTENT — do not hardcode sentences here.
  * -----------------------------------------------------------------------
  */
-import { initOrrery } from "./orrery.js?v=58";
+import { initOrrery } from "./orrery.js?v=59";
 import { initStudio } from "./studio.js?v=34";
-import { initChamber } from "./chamber.js?v=53";
+import { initChamber } from "./chamber.js?v=54";
 import { initCinematic } from "./cinematic.js?v=52";
 import { initLearn } from "./learn.js?v=48";
 
@@ -87,7 +87,9 @@ function renderHero() {
     <span>${h.headingLine3 || ""}</span>
   `;
   $("#heroSub").textContent = CONTENT.hero.sub;
-  $("#heroScrollCue").textContent = CONTENT.hero.scrollCue;
+  $("#heroScrollCue").textContent = window.matchMedia("(max-width: 900px)").matches
+    ? "Swipe up to continue"
+    : CONTENT.hero.scrollCue;
   const cast = $("#heroCast");
   (CONTENT.hero.cast || []).forEach((member) => {
     const li = el("li", `hero-cast-item hero-cast-item--${member.person}`);

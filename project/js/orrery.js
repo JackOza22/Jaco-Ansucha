@@ -515,10 +515,18 @@ function initOrrery(canvas) {
     holding = false;
   }
 
+  function isTouchPointer(e) {
+    return e.pointerType === "touch" || e.pointerType === "pen";
+  }
+
   renderer.domElement.addEventListener("pointerdown", (e) => {
     if (e.button !== 0) return;
     downPos = { x: e.clientX, y: e.clientY };
     dragging = false;
+    if (isTouchPointer(e)) {
+      holding = false;
+      return;
+    }
     holding = true;
     renderer.domElement.setPointerCapture(e.pointerId);
   });
@@ -526,7 +534,19 @@ function initOrrery(canvas) {
     if (!downPos) return;
     const dx = e.clientX - downPos.x;
     const dy = e.clientY - downPos.y;
-    if (Math.hypot(dx, dy) > 5) dragging = true;
+    if (isTouchPointer(e) && !dragging) {
+      if (Math.abs(dy) > 8 && Math.abs(dy) >= Math.abs(dx)) {
+        downPos = null;
+        holding = false;
+        return;
+      }
+      if (Math.abs(dx) < 14) return;
+      dragging = true;
+      holding = true;
+      try { renderer.domElement.setPointerCapture(e.pointerId); } catch (_) {}
+    } else if (Math.hypot(dx, dy) > 5) {
+      dragging = true;
+    }
     if (dragging) {
       extraY = dragY + yawFromDrag(dx);
       extraX = THREE.MathUtils.clamp(dragX + dy * 0.0025, -0.42, 0.42);

@@ -252,9 +252,9 @@ body[data-hover="anuscha"] .cursor-ring, body[data-cursor="anuscha"] .cursor-rin
 .stage-3d{
   position:absolute; inset:0;
   cursor: grab;
+  touch-action: pan-y;
 }
-.stage-3d:active{ cursor: grabbing; }
-.stage-3d canvas{ display:block; width:100%; height:100%; touch-action: none; }
+.stage-3d canvas{ display:block; width:100%; height:100%; touch-action: pan-y; }
 .stage-flare{
   position:absolute; inset:0; pointer-events:none; z-index:1;
   background:
@@ -684,15 +684,29 @@ html{ scrollbar-width: thin; scrollbar-color: var(--brass) var(--night-deep); }
 }
 
 @media (max-width: 900px){
-  .cinema{ height: 175vh; }
+  .cinema{
+    height: 100svh;
+    min-height: 100vh;
+  }
+  .cinema-pin{
+    position: relative;
+    height: 100svh;
+    min-height: 100vh;
+  }
   .globe-tools{
-    left: var(--gutter); right: var(--gutter); bottom: 3.4vh;
+    left: var(--gutter); right: var(--gutter); bottom: max(3.4vh, env(safe-area-inset-bottom));
     align-items: stretch;
   }
   .globe-caption{ text-align: left; max-width: none; }
   .globe-dn{ justify-content: flex-start; }
-  .stage-copy-main{ top: 5.4rem; max-width: 18ch; }
-  .stage-copy h1{ font-size: clamp(2rem, 11vw, 3.2rem); }
+  .stage-copy-main{
+    top: 5.4rem;
+    left: var(--gutter);
+    right: var(--gutter);
+    max-width: none;
+  }
+  .stage-copy h1{ font-size: clamp(1.9rem, 9.5vw, 2.7rem); }
+  .stage-copy h1 span{ overflow: visible; }
   .stage-copy .hero-sub, .stage-copy .hero-pills, .stage-copy .hero-cast{ display:none; }
   .stage-copy .hero-scrollcue{ left: var(--gutter); transform: none; bottom: 9.5vh; }
   .letterbox span{ height: 8px; }
@@ -1620,7 +1634,7 @@ body.is-chapters canvas{
   cursor: grab;
 }
 .chamber-stage:active{ cursor: grabbing; }
-.chamber-stage canvas{ display:block; width:100%; height:100%; min-height:100vh; touch-action: none; }
+.chamber-stage canvas{ display:block; width:100%; height:100%; min-height:100vh; touch-action: pan-y; }
 .chamber-copy{
   position: absolute;
   left: var(--gutter);

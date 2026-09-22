@@ -172,7 +172,7 @@ section h2{ font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 1rem; }
   color: rgba(245,240,230,.5); font-size: .9rem; text-align:center; padding: 2rem;
 }
 .orrery-stage:active{ cursor: grabbing; }
-.orrery-stage canvas{ display:block; width:100%; height:100%; touch-action: none; }
+.orrery-stage canvas{ display:block; width:100%; height:100%; touch-action: pan-y; }
 .orrery-vignette{
   position:absolute; inset:0; pointer-events:none; border-radius: 50%;
   box-shadow: inset 0 0 min(18vw, 160px) var(--night-deep);
@@ -520,7 +520,7 @@ section h2{ font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 1rem; }
 }
 .studio-miss{ color: #e7b2a4; font-size: .92rem; margin-top: .45rem; }
 .studio-stage:active{ cursor: grabbing; }
-.studio-stage canvas{ display:block; width:100%; height:100%; touch-action: none; }
+.studio-stage canvas{ display:block; width:100%; height:100%; touch-action: pan-y; }
 .studio-stage.is-fallback{
   display:flex; align-items:center; justify-content:center; color: rgba(245,240,230,.55);
   padding: 2rem; text-align:center;
