@@ -1899,17 +1899,17 @@ body.is-chapters canvas{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center 12%;
   transform: none;
   will-change: auto;
-  filter: contrast(1.06) saturate(1.04);
+  filter: contrast(1.04) saturate(1.02);
 }
 .people--cast .person--jaco .person-photo{ background: #555c66; }
 .person--jaco .person-photo img{
-  object-position: center 16%;
+  object-position: center 10%;
 }
 .person--anuscha .person-photo img{
-  object-position: center 18%;
+  object-position: center 8%;
 }
 .cast-grade{
   position:absolute; inset:0;

@@ -337,8 +337,8 @@ const CONTENT = {
     ],
     reel: [
       { file: "assets/photos/together-evening.jpg", alt: "Anuscha and Jaco", focus: "center 28%" },
-      { file: "assets/photos/jaco-portrait.jpg", alt: "Jaco", focus: "center 22%" },
-      { file: "assets/photos/anuscha-portrait.jpg", alt: "Anuscha", focus: "center 20%" },
+      { file: "assets/photos/jaco-portrait.jpg", alt: "Jaco", focus: "center 12%" },
+      { file: "assets/photos/anuscha-portrait.jpg", alt: "Anuscha", focus: "center 10%" },
       { file: "assets/photos/at-the-table.jpg", alt: "Anuscha at the table", focus: "center 35%" },
       { file: "assets/photos/project-day.jpg", alt: "Jaco", focus: "center 18%" },
       { file: "assets/photos/karting-stand.jpg", alt: "Anuscha", focus: "center 22%" },

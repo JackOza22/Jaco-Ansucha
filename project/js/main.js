@@ -11,7 +11,7 @@ import { initChamber } from "./chamber.js?v=54";
 import { initCinematic } from "./cinematic.js?v=53";
 import { initLearn } from "./learn.js?v=48";
 
-const PHOTO_V = "v=58";
+const PHOTO_V = "v=59";
 const photoSrc = (src) => (src && !src.includes("?") ? `${src}?${PHOTO_V}` : src);
 const $ = (sel, root = document) => root.querySelector(sel);
 const el = (tag, cls, html) => {
