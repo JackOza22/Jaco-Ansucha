@@ -93,6 +93,7 @@ const CONTENT = {
     headingLine2: "Two disciplines.",
     headingLine3: "No fixed address.",
     sub: "A complete education, built around your child.",
+    credit: "This website and the demos displayed were planned and created by Jaco and Anuscha.",
     scrollCue: "Scroll toward the limb · drag to turn",
     cast: [
       { person: "anuscha", name: "Anuscha van Niekerk", role: "Governess" },
@@ -105,7 +106,7 @@ const CONTENT = {
     night: "Night",
     day: "Day",
     kicker: "Who teaches what",
-    hint: "Choose a discipline. Moss is Jaco, oxblood is Anuscha.",
+    hint: "Choose a discipline. Green is Jaco, red is Anuscha.",
     subjects: [
       {
         id: "sciences",
@@ -170,7 +171,7 @@ const CONTENT = {
     body: "Every lesson plan is written for your child specifically. Every tool, every interactive app, every 3D model is built around how they learn, not adjusted from a template built for millions of other children.",
     close: "The result is something most families have never had access to: the depth of a private education, with the technology of an EdTech studio, in a single relationship that travels with your family wherever you go. We are a governess and an instructional designer, working as one. Not a school. Not a platform.",
     photos: [
-      { file: "assets/photos/anuscha-working.jpeg", alt: "Anuscha writing a lesson by hand beside her planning screen", caption: "Anuscha, the lesson, on paper and in the plan", person: "anuscha" },
+      { file: "assets/photos/lesson-table.jpg", alt: "Anuscha planning the next part of a lesson", caption: "Anuscha, the lesson, on paper and in the plan", person: "anuscha" },
       { file: "assets/photos/jaco-working.jpeg", alt: "Jaco at his desk building learning materials", caption: "Jaco, the tools, built at the same table", person: "jaco" }
     ]
   },
@@ -188,15 +189,23 @@ const CONTENT = {
       photoPlaceholder: "assets/photos/jaco-portrait.jpg",
       credit: "Instructional designer",
       cv: "assets/jaco-cv.pdf",
-      bio: "Jaco brings a background in instructional design and multimedia, built through years of designing interactive learning modules, 3D visualisation, and video-based content for professional eLearning clients. Since 2023 he has worked as Senior Multimedia Designer at The Boiler Room, building interactive courses, real-time 3D environments, and production pipelines used in commercial training and education. Alongside this, he has co-educated directly with Anuscha since May 2023, teaching Natural Sciences, Technology, and History through models, demonstration, and video, while joining school trips and practical lessons in person, from museum visits to field investigations. Where Anuscha builds the lesson plan around the child’s learning style, Jaco builds the tools and experiences that bring it to life: interactive 3D models the child can rotate and explore, a custom digital exam app he built and maintains, and filmed lessons that let learning continue if a child is unwell. His approach is simple: a child understands something faster once they can see it, touch it, or take it apart. The explanation follows from there, not the other way around. Like Anuscha, Jaco holds the same standard of discretion in a private household, with the trust of the family he has worked alongside for more than three years.",
+      bio: [
+        "Jaco brings a background in instructional design and multimedia, built through years of designing interactive learning modules, 3D visualisation, and video-based content for professional eLearning clients.",
+        "Since 2023 he has worked as Senior Multimedia Designer at The Boiler Room, building interactive courses, real-time 3D environments, and production pipelines used in commercial training and education.",
+        "Alongside this, he has co-educated directly with Anuscha since May 2023, teaching Natural Sciences, Technology, and History through models, demonstration, and video, while joining school trips and practical lessons in person, from museum visits to field investigations.",
+        "Where Anuscha builds the lesson plan around the child’s learning style, Jaco builds the tools and experiences that bring it to life: interactive 3D models the child can rotate and explore, a custom digital exam app he built and maintains, and filmed lessons that let learning continue if a child is unwell.",
+        "His approach is simple: a child understands something faster once they can see it, touch it, or take it apart.",
+        "The explanation follows from there, not the other way around.",
+        "Like Anuscha, Jaco holds the same standard of discretion in a private household, with the trust of the family he has worked alongside for more than three years."
+      ],
       credentials: [
         "Diploma, 3D Animation & Visual Effects, Open Window Institute, 2018",
         "Valid passport",
         "Instructional design practice since 2018",
         "Senior Multimedia Designer, The Boiler Room, 2023 to present",
         "Real-time 3D (Unreal Engine) and custom production pipelines",
-        "TEFL Certificate, Udemy, 2026",
-        "Police Clearance Certificate, 2026",
+        "TEFL Certificate, Udemy, in progress (will be done no later than end of October)",
+        "Police Clearance Certificate, in progress (will be done no later than end of October)",
         "Driving permit, Category C1, eligible in the UK and Europe"
       ],
       languages: [
@@ -216,7 +225,16 @@ const CONTENT = {
       photoPlaceholder: "assets/photos/anuscha-portrait.jpg",
       credit: "Governess",
       cv: "assets/anuscha-cv.pdf",
-      bio: "Anuscha holds a Bachelor of Education in Foundation Phase Teaching, giving her the theoretical grounding and terminology to read, interpret, and apply any curriculum framework rather than simply following one. Alongside her degree she trained in child psychology and counselling, and has spent her career teaching in homeschooling environments where she was responsible for children’s academic progress, pacing, and assessment. Currently she is a governess who delivers a complete homeschooling curriculum for a Grade 5 learner alongside Jaco. She manages every subject, milestone, and progress report, while supporting the child’s emotional development in close co-ordination with therapists and specialists. Her approach regularly extends beyond the lesson plan: museum visits, theatre excursions, and other real-world experiences that turn academic material into something lived, not just studied. Before working privately, she spent three years teaching in a homeschooling academy while studying for her bachelor’s degree, with direct experience of children with ADHD, dyslexia, and autism who needed a more personalised approach. Across every setting the focus has been the same: meeting a child where they are, and building the lesson plan around them. In every role, and especially in a live-in private setting, discretion and the family’s privacy remain a priority.",
+      bio: [
+        "Anuscha holds a Bachelor of Education in Foundation Phase Teaching, giving her the theoretical grounding and terminology to read, interpret, and apply any curriculum framework rather than simply following one.",
+        "Alongside her degree she trained in child psychology and counselling, and has spent her career teaching in homeschooling environments where she was responsible for children’s academic progress, pacing, and assessment.",
+        "Currently she is a governess who delivers a complete homeschooling curriculum for a Grade 5 learner alongside Jaco.",
+        "She manages every subject, milestone, and progress report, while supporting the child’s emotional development in close co-ordination with therapists and specialists.",
+        "Her approach regularly extends beyond the lesson plan: museum visits, theatre excursions, and other real-world experiences that turn academic material into something lived, not just studied.",
+        "Before working privately, she spent three years teaching in a homeschooling academy while studying for her bachelor’s degree, with direct experience of children with ADHD, dyslexia, and autism who needed a more personalised approach.",
+        "Across every setting the focus has been the same: meeting a child where they are, and building the lesson plan around them.",
+        "In every role, and especially in a live-in private setting, discretion and the family’s privacy remain a priority."
+      ],
       credentials: [
         "Bachelor of Education, Foundation Phase Teaching, STADIO Higher Education, 2021 to 2025",
         "State Teaching License",
@@ -224,7 +242,7 @@ const CONTENT = {
         "TEFL Certificate, The TEFL Academy, 2018",
         "Counselling and Child Psychology, Udemy, 2019",
         "Paediatric First Aid, Pretorius Institute of Medical Excellence, 2025",
-        "Police Clearance Certificate, 2026",
+        "Police Clearance Certificate, in progress (will be done no later than end of October)",
         "Driving permit, Category B, eligible in the UK and Europe",
         "Completed the Davis Dyslexia Program under Jan Viljoen (Dyslexia Correction Practitioner, studied in the UK)"
       ],
@@ -271,8 +289,8 @@ const CONTENT = {
             kicker: "Governess",
             title: "The plan",
             note: "Psychology, pacing, the child",
-            file: "assets/photos/anuscha-working.jpeg",
-            alt: "Anuscha writing a lesson beside her planning screen",
+            file: "assets/photos/lesson-table.jpg",
+            alt: "Anuscha planning a lesson at the table",
             fit: "cover"
           },
           right: {
@@ -312,13 +330,12 @@ const CONTENT = {
     heading: "A partnership built long before the classroom",
     kicker: "Together",
     paragraphs: [
-      "Anuscha and Jaco have been together since 2018. The same curiosity that shaped their relationship shapes how they teach. Having grown up in South Africa, both were raised surrounded by a wide range of cultures and traditions from childhood, an exposure that shaped how naturally they work across culturally diverse families and learners today.",
+      "Anuscha and Jaco have been in a relationship since 2018. The same curiosity that shaped their relationship shapes how they teach. Having grown up in South Africa, both were raised surrounded by a wide range of cultures and traditions from childhood, an exposure that shaped how naturally they work across culturally diverse families and learners today.",
       "A shared love of travel, adventure, and meeting new people runs through everything they do, both personally and professionally. That same curiosity extends into a genuine passion for learning itself, which is what drives their belief that education should be fun, hands-on, and far less restrictive than a textbook or a worksheet.",
       "Outside of lessons, they stay active together: camping, swimming, ice skating, hiking, and seeking out anything educational or entertaining along the way. Jaco spent several years training in MMA, bringing a discipline and physical energy that carries directly into sports coaching and hands-on activities with the children. Anuscha sings, plays guitar, and works in art alongside the children, using creativity as a form of therapy and self-discovery, especially for children who express themselves more freely through music or art than words.",
       "As technology plays a growing role in how they teach, online child safety is treated as a top priority. Both stay closely informed on the risks of social media and in-game chat features that many children now navigate daily. Technology is a tool they use to teach; keeping it safe is a responsibility they take just as seriously."
     ],
     reel: [
-      { file: "assets/photos/together-cave.jpg", alt: "Anuscha and Jaco", focus: "center 30%" },
       { file: "assets/photos/together-evening.jpg", alt: "Anuscha and Jaco", focus: "center 28%" },
       { file: "assets/photos/jaco-portrait.jpg", alt: "Jaco", focus: "center 22%" },
       { file: "assets/photos/anuscha-portrait.jpg", alt: "Anuscha", focus: "center 20%" },
@@ -328,7 +345,6 @@ const CONTENT = {
       { file: "assets/photos/lesson-models.jpg", alt: "Anuscha at a lesson", focus: "center 28%" },
       { file: "assets/photos/lesson-table.jpg", alt: "Anuscha at the lesson table", focus: "center 24%" },
       { file: "assets/photos/jaco-working.jpeg", alt: "Jaco at his desk", focus: "center 30%" },
-      { file: "assets/photos/anuscha-working.jpeg", alt: "Anuscha writing a lesson", focus: "center 35%" },
       { file: "assets/photos/jaco-beach.jpg", alt: "Jaco at the coast", focus: "center 12%" },
       { file: "assets/photos/jaco-graduation.jpg", alt: "Jaco graduation", focus: "center 20%" },
       { file: "assets/photos/anuscha-graduation.jpeg", alt: "Anuscha graduation", focus: "center 22%" },
@@ -589,26 +605,26 @@ const CONTENT = {
   ],
 
   testimonials: {
-    intro: "As much as we would love to share our memories and accomplishments with our host families, we take the privacy of all families very seriously. Upon request, we will provide you with the appropriate contact details of our references and they would be happy to share their experience with us personally.",
+    intro: "We would love to share the memories and milestones we've built with past families, but we take their privacy seriously and don't discuss that publicly. Instead, upon request, we're happy to provide direct contact details for our references, who can speak to their experience with us personally.",
     cards: []
   },
 
   faq: [
     {
       q: "Do you both teach, or is one of you a helper?",
-      a: "Both teach. Anuscha is the governess: curriculum, assessment, pastoral care. Jaco is the instructional designer: materials, 3D tools, destination lessons, sport and the practical running of the day. We do not do the same job."
+      a: "Both educators teach. Some lessons, like Physical Education and History, are naturally suited to joint teaching. Subjects that require more detailed, in-depth explanation, such as Languages and Mathematics, are led by Anuscha. Jaco teaches fact-based subjects like Natural Sciences, Social Sciences, and Life Orientation, though Anuscha may also take these on when the content requires greater depth."
     },
     {
       q: "Can you teach two children of different ages?",
-      a: "Yes. Anuscha’s Foundation Phase degree and her Grade 5 practice already span that range; she has taught 5 to 14, including culturally and neurologically diverse classrooms. A younger child and an older sibling is a natural split: pedagogy and routine on one side, projects, sport and exam preparation on the other."
+      a: "Sometimes lessons will be done together, sometimes separately, depending on the lesson. With more than one child, they can alternate between learners based on the activity."
     },
     {
       q: "How do you teach AI literacy?",
-      a: "Children learn to build apps using AI so they stay up to date with a competitive industry, and they learn to use AI responsibly. AI is not used to do the work for anyone. Online child safety, including social media and in-game chat, is treated as a top priority."
+      a: "Children learn to build apps using AI so they stay up to date with a competitive industry, and they learn to use AI responsibly. AI is not used to do the work for anyone."
     },
     {
       q: "Live-in or live-out? Will you relocate?",
-      a: "Either arrangement, as the household needs. No fixed address: we are available from January 2027 for a long-term post, including a travel year and relocation."
+      a: "Either arrangement, as the household needs. No fixed address: we are available from January 2027 for a long-term post, including to relocate and travel."
     },
     {
       q: "Additional learning needs?",
@@ -627,8 +643,6 @@ const CONTENT = {
     { type: "photo", file: "lesson-models.jpg", caption: "Hands-on models at the lesson table", person: "anuscha" },
     { type: "photo", file: "lesson-table.jpg", caption: "Planning the next part of the lesson", person: "anuscha" },
     { type: "photo", file: "jaco-working.jpeg", caption: "Building the educational app", person: "jaco" },
-    { type: "photo", file: "anuscha-working.jpeg", caption: "The lesson, written by hand", person: "anuscha" },
-    { type: "photo", file: "together-cave.jpg", caption: "Anuscha and Jaco", person: "joint" },
     { type: "photo", file: "together-evening.jpg", caption: "Out together", person: "joint" },
     { type: "photo", file: "anuscha-river.jpg", caption: "By the river", person: "anuscha" },
     { type: "photo", file: "anuscha-hike.jpg", caption: "On the trail", person: "anuscha" },
@@ -667,9 +681,9 @@ const CONTENT = {
       { label: "Worldschooling families welcome", person: "joint" },
       { label: "Driving permit, Category C1, UK & Europe", person: "jaco" },
       { label: "Driving permit, Category B, UK & Europe", person: "anuscha" },
-      { label: "Police clearance held", person: "jaco" },
-      { label: "Police clearance held", person: "anuscha" },
-      { label: "TEFL certified", person: "jaco" },
+      { label: "Police clearance in progress", person: "jaco" },
+      { label: "Police clearance in progress", person: "anuscha" },
+      { label: "TEFL in progress", person: "jaco" },
       { label: "TEFL certified", person: "anuscha" },
       { label: "Paediatric First Aid", person: "anuscha" },
       { label: "IB curriculum training", person: "anuscha" },
@@ -678,7 +692,7 @@ const CONTENT = {
   },
 
   references: {
-    text: "As much as we would love to share our memories and accomplishments with our host families, we take the privacy of all families very seriously. Upon request, we will provide you with the appropriate contact details of our references and they would be happy to share their experience with us personally."
+    text: "We would love to share the memories and milestones we've built with past families, but we take their privacy seriously and don't discuss that publicly. Instead, upon request, we're happy to provide direct contact details for our references, who can speak to their experience with us personally."
   },
 
   closing: {

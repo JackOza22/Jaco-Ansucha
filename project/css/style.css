@@ -584,9 +584,9 @@ section h2{ font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 1rem; }
 
 .learn-stage{
   position: relative;
-  width: 100vw;
-  margin: 0 0 3rem calc(50% - 50vw);
-  padding: clamp(2.2rem, 5vw, 3.6rem) var(--gutter) clamp(2.6rem, 6vw, 4.2rem);
+  width: 100%;
+  margin: 0 0 3rem;
+  padding: clamp(2.2rem, 5vw, 3.6rem) 0 clamp(2.6rem, 6vw, 4.2rem);
   overflow: hidden;
   color: #f4efe4;
 }
@@ -879,7 +879,7 @@ section h2{ font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 1rem; }
    REFERENCES / FAQ
    ========================================================================= */
 .testimonials{ max-width: 1080px; margin: 0 auto; }
-.testimonials-intro{ color: var(--ink-soft); max-width: var(--measure); margin: 1rem 0 2rem; }
+.testimonials-intro{ color: var(--ink-soft); max-width: 68ch; margin: 1rem 0 2rem; font-size: 1.05rem; line-height: 1.65; }
 .testimonial-grid{
   display:grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-bottom: 2.5rem;
 }
@@ -963,6 +963,11 @@ body.is-lightbox{ overflow: hidden; }
 .sitefoot{
   background: var(--night); color: rgba(245,240,230,.45); text-align:left;
   padding: 1.5rem var(--gutter) 2.5rem; font-size: .82rem;
+}
+.site-disclaimer{
+  max-width: 68ch;
+  margin-top: .45rem;
+  color: rgba(245,240,230,.62);
 }
 
 @media (max-width: 768px){

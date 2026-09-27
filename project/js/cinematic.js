@@ -149,17 +149,7 @@ export function initCinematic({ orrery, studio, chamber }) {
       if (cinema) cinema.classList.toggle("is-entering", cinemaT > 0.7);
 
       const people = document.getElementById("people");
-      if (people && !reduceMotion) {
-        const t = inViewProgress(people);
-        people.style.setProperty("--cast", t.toFixed(3));
-        people.querySelectorAll(".person-photo img").forEach((img, i) => {
-          const dir = i === 0 ? 1 : -1;
-          const card = img.closest(".person");
-          const mx = parseFloat(card?.style.getPropertyValue("--mx") || "50") - 50;
-          const my = parseFloat(card?.style.getPropertyValue("--my") || "28") - 28;
-          img.style.transform = `scale(${1.08 + t * 0.06}) translate3d(${mx * 0.18}px, ${(0.5 - t) * 36 * dir + my * 0.12}px, 0)`;
-        });
-      }
+      if (people) people.style.setProperty("--cast", inViewProgress(people).toFixed(3));
       const problem = document.getElementById("problem");
       if (problem && !reduceMotion) {
         const t = inViewProgress(problem);

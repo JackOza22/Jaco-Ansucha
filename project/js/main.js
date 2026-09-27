@@ -8,10 +8,10 @@
 import { initOrrery } from "./orrery.js?v=59";
 import { initStudio } from "./studio.js?v=34";
 import { initChamber } from "./chamber.js?v=54";
-import { initCinematic } from "./cinematic.js?v=52";
+import { initCinematic } from "./cinematic.js?v=53";
 import { initLearn } from "./learn.js?v=48";
 
-const PHOTO_V = "v=57";
+const PHOTO_V = "v=58";
 const photoSrc = (src) => (src && !src.includes("?") ? `${src}?${PHOTO_V}` : src);
 const $ = (sel, root = document) => root.querySelector(sel);
 const el = (tag, cls, html) => {
@@ -23,24 +23,17 @@ const el = (tag, cls, html) => {
 
 function assetExists(path, kind = "image") {
   return new Promise((resolve) => {
-    let settled = false;
-    const done = (ok) => {
-      if (settled) return;
-      settled = true;
-      resolve(ok);
-    };
-    window.setTimeout(() => done(false), 1200);
     if (kind === "video") {
       const v = document.createElement("video");
       v.preload = "metadata";
-      v.onloadedmetadata = () => done(true);
-      v.onerror = () => done(false);
+      v.onloadedmetadata = () => resolve(true);
+      v.onerror = () => resolve(false);
       v.src = path;
       return;
     }
     const img = new Image();
-    img.onload = () => done(true);
-    img.onerror = () => done(false);
+    img.onload = () => resolve(true);
+    img.onerror = () => resolve(false);
     img.src = path;
   });
 }
@@ -87,6 +80,8 @@ function renderHero() {
     <span>${h.headingLine3 || ""}</span>
   `;
   $("#heroSub").textContent = CONTENT.hero.sub;
+  const credit = $("#heroCredit");
+  if (credit) credit.textContent = CONTENT.hero.credit || "";
   $("#heroScrollCue").textContent = window.matchMedia("(max-width: 900px)").matches
     ? "Swipe up to continue"
     : CONTENT.hero.scrollCue;
@@ -157,6 +152,7 @@ async function renderPerson(containerId, person) {
     ? `<img src="${photoSrc(person.photoPlaceholder)}" alt="${person.name}">`
     : `<span>Add a portrait at<br><code>${person.photoPlaceholder}</code><br><em>${initials}</em></span>`;
 
+  const bios = Array.isArray(person.bio) ? person.bio : [person.bio];
   container.innerHTML = `
     <div class="cast-still">
       <div class="person-photo">
@@ -173,9 +169,9 @@ async function renderPerson(containerId, person) {
       </div>
     </div>
     <div class="cast-dossier">
-      <p class="person-bio">${person.bio}</p>
+      ${bios.map((paragraph) => `<p class="person-bio">${paragraph}</p>`).join("")}
       <div class="person-sub">
-        <h4>Education &amp; certification</h4>
+        <h4>Education &amp; certification (legal authorization, verified education, completed training)</h4>
         <ul>${person.credentials.map(c => `<li>${c}</li>`).join("")}</ul>
       </div>
       <div class="person-sub">
