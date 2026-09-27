@@ -384,7 +384,7 @@ function webglAvailable() {
 function initOrrery(canvas) {
   const parent = canvas.parentElement;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const useBloom = window.innerWidth >= 700;
+  const useBloom = false;
 
   const noop = {
     setProgress() {},
@@ -415,7 +415,7 @@ function initOrrery(canvas) {
   camera.lookAt(0, 0, 0);
 
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-  renderer.setClearColor(0x03050c, 1);
+  renderer.setClearColor(0x03050c, 0);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 0.72;

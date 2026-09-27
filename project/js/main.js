@@ -5,7 +5,7 @@
  * All copy comes from CONTENT — do not hardcode sentences here.
  * -----------------------------------------------------------------------
  */
-import { initOrrery } from "./orrery.js?v=59";
+import { initOrrery } from "./orrery.js?v=60";
 import { initStudio } from "./studio.js?v=34";
 import { initChamber } from "./chamber.js?v=54";
 import { initCinematic } from "./cinematic.js?v=53";
@@ -82,6 +82,16 @@ function renderHero() {
   $("#heroSub").textContent = CONTENT.hero.sub;
   const credit = $("#heroCredit");
   if (credit) credit.textContent = CONTENT.hero.credit || "";
+  const anuHero = $("#heroPortraitAnuscha");
+  const jacoHero = $("#heroPortraitJaco");
+  if (anuHero) {
+    anuHero.src = photoSrc(CONTENT.people.anuscha.photoPlaceholder);
+    anuHero.alt = CONTENT.people.anuscha.name;
+  }
+  if (jacoHero) {
+    jacoHero.src = photoSrc(CONTENT.people.jaco.photoPlaceholder);
+    jacoHero.alt = CONTENT.people.jaco.name;
+  }
   $("#heroScrollCue").textContent = window.matchMedia("(max-width: 900px)").matches
     ? "Swipe up to continue"
     : CONTENT.hero.scrollCue;
