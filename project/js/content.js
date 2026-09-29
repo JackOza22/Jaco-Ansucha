@@ -188,7 +188,7 @@ const CONTENT = {
       location: "Gauteng, South Africa",
       photoPlaceholder: "assets/photos/jaco-portrait.jpg",
       credit: "Instructional designer",
-      cv: "assets/jaco-cv.pdf",
+      cv: "assets/jaco-cv.pdf?v=2",
       bio: [
         "Jaco brings a background in instructional design and multimedia, built through years of designing interactive learning modules, 3D visualisation, and video-based content for professional eLearning clients.",
         "Since 2023 he has worked as Senior Multimedia Designer at The Boiler Room, building interactive courses, real-time 3D environments, and production pipelines used in commercial training and education.",
@@ -224,7 +224,7 @@ const CONTENT = {
       location: "Gauteng, South Africa",
       photoPlaceholder: "assets/photos/anuscha-portrait.jpg",
       credit: "Governess",
-      cv: "assets/anuscha-cv.pdf",
+      cv: "assets/anuscha-cv.pdf?v=2",
       bio: [
         "Anuscha holds a Bachelor of Education in Foundation Phase Teaching, giving her the theoretical grounding and terminology to read, interpret, and apply any curriculum framework rather than simply following one.",
         "Alongside her degree she trained in child psychology and counselling, and has spent her career teaching in homeschooling environments where she was responsible for children’s academic progress, pacing, and assessment.",

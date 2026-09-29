@@ -127,16 +127,18 @@ export function initCinematic({ orrery, studio, chamber }) {
       if (orrery && orrery.setProgress) orrery.setProgress(cinemaT);
       if (copy) {
         const main = copy.querySelector(".stage-copy-main");
-        const extras = copy.querySelectorAll(".hero-cast, .hero-pills");
+        const extras = copy.querySelectorAll(".hero-pills");
         const fadeTitle = 1 - Math.min(1, cinemaT / 0.46);
         const fadeSide = 1 - Math.min(1, cinemaT / 0.3);
         if (main) {
           main.style.opacity = String(fadeTitle);
-          main.style.transform = `translate3d(0, ${cinemaT * -40}px, 0)`;
+          main.style.transform = `translate3d(-50%, ${cinemaT * -40}px, 0)`;
         }
         extras.forEach((el) => { el.style.opacity = String(fadeSide); });
         const cue = copy.querySelector(".hero-scrollcue");
         if (cue) cue.style.opacity = String(1 - Math.min(1, cinemaT / 0.22));
+        const credit = copy.querySelector(".hero-credit");
+        if (credit) credit.style.opacity = String(1 - Math.min(1, cinemaT / 0.28));
       }
       const tools = document.getElementById("globeTools");
       if (tools) tools.style.opacity = String(Math.max(0, 0.85 - cinemaT * 1.35));
@@ -147,6 +149,9 @@ export function initCinematic({ orrery, studio, chamber }) {
         document.documentElement.style.setProperty("--entry", entry.toFixed(3));
       }
       if (cinema) cinema.classList.toggle("is-entering", cinemaT > 0.7);
+      document.body.classList.toggle("is-past-hero", cinemaT > 0.78);
+      const portraits = document.querySelector(".hero-portraits");
+      if (portraits) portraits.style.opacity = String(1 - Math.min(1, cinemaT / 0.42));
 
       const people = document.getElementById("people");
       if (people) people.style.setProperty("--cast", inViewProgress(people).toFixed(3));
@@ -159,8 +164,8 @@ export function initCinematic({ orrery, studio, chamber }) {
         if (plans) plans.style.transform = `rotate(-1.2deg) translateY(${(t - 0.5) * 28}px)`;
       }
 
-      const box = 10 + Math.sin(cinemaT * Math.PI) * 22 + vel * 70;
-      letterbox.forEach((el) => { el.style.height = `${Math.max(8, Math.min(56, box))}px`; });
+      const box = 8 + Math.sin(cinemaT * Math.PI) * 14 + vel * 36;
+      letterbox.forEach((el) => { el.style.height = `${Math.max(6, Math.min(28, box))}px`; });
 
       const studioEl = document.getElementById("studio");
       if (studio && studio.setSpin && studioEl) {

@@ -8,7 +8,7 @@
 import { initOrrery } from "./orrery.js?v=60";
 import { initStudio } from "./studio.js?v=34";
 import { initChamber } from "./chamber.js?v=54";
-import { initCinematic } from "./cinematic.js?v=53";
+import { initCinematic } from "./cinematic.js?v=55";
 
 const PHOTO_V = "v=60";
 const photoSrc = (src) => (src && !src.includes("?") ? `${src}?${PHOTO_V}` : src);
