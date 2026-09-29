@@ -293,6 +293,47 @@ section h2{ font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 1rem; }
   padding-top: 1.5rem; border-top: 1px solid var(--brass-line);
   text-align: center;
 }
+.process{
+  margin: 2.8rem 0 1.6rem;
+  max-width: 72ch;
+}
+.process h3{
+  font-size: clamp(1.85rem, 4vw, 2.7rem);
+  margin: 0 0 1.35rem;
+  letter-spacing: -.02em;
+}
+.process-steps{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+.process-step{
+  padding-top: 1.05rem;
+  border-top: 1px solid var(--brass-line);
+}
+.process-step h4{
+  font-family: var(--sans);
+  font-size: .86rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin: 0 0 .4rem;
+  color: var(--oxblood);
+}
+.process-step p{
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+.process-note{
+  margin: 1.5rem 0 0;
+  color: var(--ink-faint);
+  font-size: .98rem;
+  line-height: 1.55;
+}
 
 /* =========================================================================
    ALTERNATIVE / TOGETHER

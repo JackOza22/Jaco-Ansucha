@@ -9,9 +9,8 @@ import { initOrrery } from "./orrery.js?v=60";
 import { initStudio } from "./studio.js?v=34";
 import { initChamber } from "./chamber.js?v=54";
 import { initCinematic } from "./cinematic.js?v=53";
-import { initLearn } from "./learn.js?v=48";
 
-const PHOTO_V = "v=59";
+const PHOTO_V = "v=60";
 const photoSrc = (src) => (src && !src.includes("?") ? `${src}?${PHOTO_V}` : src);
 const $ = (sel, root = document) => root.querySelector(sel);
 const el = (tag, cls, html) => {
@@ -548,6 +547,17 @@ function renderClassroom() {
   };
   renderRows("classroomJacoRows", CONTENT.classroom.columns.jaco);
   renderRows("classroomAnuschaRows", CONTENT.classroom.columns.anuscha);
+  const process = c.process;
+  if (process) {
+    if ($("#processHeading")) $("#processHeading").textContent = process.heading || "";
+    const steps = $("#processSteps");
+    if (steps) {
+      (process.steps || []).forEach((step) => {
+        steps.appendChild(el("li", "process-step", `<h4>${step.title}</h4><p>${step.text}</p>`));
+      });
+    }
+    if ($("#processNote")) $("#processNote").textContent = process.note || "";
+  }
   renderCurriculum();
 }
 
@@ -661,13 +671,6 @@ function renderStudio() {
     still.alt = room.alt;
     const cap = $("#classroomStillCap");
     if (cap) cap.textContent = room.caption;
-  }
-  if (CONTENT.learn) {
-    const kicker = $("#learnKicker");
-    const lead = $("#learnLead");
-    if (kicker) kicker.textContent = CONTENT.learn.kicker;
-    if (lead) lead.textContent = CONTENT.learn.lead;
-    initLearn($("#learnApp"), $("#learnBg"), CONTENT.learn, still);
   }
   return api;
 }

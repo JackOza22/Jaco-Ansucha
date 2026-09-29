@@ -13,8 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=63">
-<link rel="stylesheet" href="css/cinematic.css?v=97">
+<link rel="stylesheet" href="css/style.css?v=64">
+<link rel="stylesheet" href="css/cinematic.css?v=98">
 </head>
 <body class="is-loading">
 
@@ -149,6 +149,11 @@
         <ol class="rhythm" id="rhythm"></ol>
       </div>
     </div>
+    <div class="process" id="process">
+      <h3 id="processHeading"></h3>
+      <ol class="process-steps" id="processSteps"></ol>
+      <p class="process-note" id="processNote"></p>
+    </div>
     <div class="ledger">
       <div class="ledger-col ledger-col--anuscha" data-person="anuscha">
         <h3 id="classroomAnuschaName"></h3>
@@ -180,15 +185,6 @@
       <img id="classroomStillImg" alt="A laptop open on a desk, with software code on the screen" src="assets/photos/lesson-tech.jpg" width="2000" height="1333">
       <figcaption id="classroomStillCap"></figcaption>
     </figure>
-    <div class="learn-stage" id="learnStage">
-      <canvas class="learn-bg" id="learnBg" aria-hidden="true"></canvas>
-      <div class="learn-veil" aria-hidden="true"></div>
-      <div class="learn-stage-copy">
-        <p class="learn-kicker" id="learnKicker"></p>
-        <p class="learn-lead" id="learnLead"></p>
-      </div>
-      <div class="lms" id="learnApp" aria-label="Learning app preview"></div>
-    </div>
     <div class="studio-proof">
       <ul class="studio-notes" id="studioNotes"></ul>
       <div class="studio-lab">
@@ -305,7 +301,7 @@
   }
 }
 </script>
-<script src="js/content.js?v=81"></script>
-<script type="module" src="js/main.js?v=97"></script>
+<script src="js/content.js?v=82"></script>
+<script type="module" src="js/main.js?v=98"></script>
 </body>
 </html>

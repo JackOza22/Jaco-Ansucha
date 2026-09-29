@@ -171,7 +171,7 @@ const CONTENT = {
     body: "Every lesson plan is written for your child specifically. Every tool, every interactive app, every 3D model is built around how they learn, not adjusted from a template built for millions of other children.",
     close: "The result is something most families have never had access to: the depth of a private education, with the technology of an EdTech studio, in a single relationship that travels with your family wherever you go. We are a governess and an instructional designer, working as one. Not a school. Not a platform.",
     photos: [
-      { file: "assets/photos/lesson-table.jpg", alt: "Anuscha planning the next part of a lesson", caption: "Anuscha, the lesson, on paper and in the plan", person: "anuscha" },
+      { file: "assets/photos/anuscha-planning.jpg", alt: "Anuscha planning a lesson at her desk", caption: "Anuscha, the lesson, on paper and in the plan", person: "anuscha" },
       { file: "assets/photos/jaco-working.jpeg", alt: "Jaco at his desk building learning materials", caption: "Jaco, the tools, built at the same table", person: "jaco" }
     ]
   },
@@ -199,12 +199,12 @@ const CONTENT = {
         "Like Anuscha, Jaco holds the same standard of discretion in a private household, with the trust of the family he has worked alongside for more than three years."
       ],
       credentials: [
-        "Diploma, 3D Animation & Visual Effects, Open Window Institute, 2018",
+        "National Certificate, 3D Animation & Visual Effects, Open Window Institute, 2018",
         "Valid passport",
         "Instructional design practice since 2018",
         "Senior Multimedia Designer, The Boiler Room, 2023 to present",
         "Real-time 3D (Unreal Engine) and custom production pipelines",
-        "TEFL Certificate, Udemy, in progress (will be done no later than end of October)",
+        "TEFL Certificate, Udemy, 2026",
         "Police Clearance Certificate, in progress (will be done no later than end of October)",
         "Driving permit, Category C1, eligible in the UK and Europe"
       ],
@@ -237,14 +237,14 @@ const CONTENT = {
       ],
       credentials: [
         "Bachelor of Education, Foundation Phase Teaching, STADIO Higher Education, 2021 to 2025",
-        "State Teaching License",
+        "SACE registered Teaching License",
         "Valid passport",
         "TEFL Certificate, The TEFL Academy, 2018",
         "Counselling and Child Psychology, Udemy, 2019",
         "Paediatric First Aid, Pretorius Institute of Medical Excellence, 2025",
         "Police Clearance Certificate, in progress (will be done no later than end of October)",
         "Driving permit, Category B, eligible in the UK and Europe",
-        "Completed the Davis Dyslexia Program under Jan Viljoen (Dyslexia Correction Practitioner, studied in the UK)"
+        "Completed the Davis Dyslexia Program under Jan Viljoen, licensed Davis Dyslexia Facilitator"
       ],
       languages: [
         { name: "English", level: "Fluent" },
@@ -269,7 +269,7 @@ const CONTENT = {
         text: "CAPS, IB, Cambridge, or IEB. Anuscha can read, interpret and apply it, rather than simply following a script. Jaco translates the lesson plan made with Anuscha into their educational app by creating custom teaching and learning tools.",
         visual: {
           kind: "frameworks",
-          plate: { file: "assets/photos/classroom.jpg", alt: "An empty classroom" },
+          plate: { file: "assets/photos/curriculum-books.jpg", alt: "Lesson books, a planner, and curriculum materials on the table" },
           cards: [
             { code: "CAPS", name: "South Africa", note: "National curriculum" },
             { code: "IB", name: "International", note: "Diploma programme" },
@@ -297,8 +297,8 @@ const CONTENT = {
             kicker: "EdTech",
             title: "The experience",
             note: "The lesson, on the app",
-            file: "assets/photos/educational-app.jpg",
-            alt: "A lesson open in the educational app",
+            file: "assets/photos/plant-demo.jpg",
+            alt: "A 3D flowering plant lesson in the educational app",
             fit: "contain"
           },
           proofs: [
@@ -323,7 +323,29 @@ const CONTENT = {
         }
       ]
     },
-    result: "The result is a lesson plan built on educational psychology and inclusive teaching, delivered through interactive, hands-on experiences designed to travel. When technology needs updating or troubleshooting, that support is built in. And if your child is unwell or unable to attend a lesson, recorded video lessons mean learning continues without interruption."
+    result: "The result is a lesson plan built on educational psychology and inclusive teaching, delivered through interactive, hands-on experiences designed to travel. When technology needs updating or troubleshooting, that support is built in. And if your child is unwell or unable to attend a lesson, recorded video lessons mean learning continues without interruption.",
+    process: {
+      heading: "How It Works",
+      steps: [
+        {
+          title: "Step 1: Understand",
+          text: "Anuscha reviews the chosen curriculum, how the child learns, and what the parents expect in the long term."
+        },
+        {
+          title: "Step 2: Plan & Design",
+          text: "Anuscha and Jaco plan the lesson together. Anuscha draws on her knowledge of educational psychology, inclusive education, and hands-on experience to ensure the right approach, resources, and activities are used, and that assessments comply with curriculum requirements. Jaco then builds a quick demo of the activity or lesson in minutes, which the two refine and adapt together."
+        },
+        {
+          title: "Step 3: Build",
+          text: "Jaco develops the final version within the educational app, ready for the child to use, and Anuscha tests it before it goes live."
+        },
+        {
+          title: "Step 4: Track & Adapt",
+          text: "The child completes the activity or assignment in the app, and the results are sent directly to Anuscha's progress tracker. From there, she decides whether the lesson needs to be revisited or the child is ready for more of a challenge. While travelling, the app also helps the child practise and strengthen specific areas of weakness."
+        }
+      ],
+      note: "The time it takes to plan a lesson depends on its depth and complexity. However, building new resources and adding new lessons to the app typically takes less than an hour, using nothing more than a single laptop."
+    }
   },
 
   together: {
@@ -357,7 +379,7 @@ const CONTENT = {
   studio: {
     eyebrow: "Introduction to the educational app",
     heading: "A studio built for one child, then proved in the lesson",
-    intro: "The educational app is the classroom tool Jaco builds from the lesson plan he and Anuscha write together. She sets the outcomes. He turns them into custom teaching and learning tools, including diagrams a learner can turn in 3D. The screen below is a preview of how a learner studies. Under it, a short demo of a 3D question.",
+    intro: "The educational app is the classroom tool Jaco builds from the lesson plan he and Anuscha write together. She sets the outcomes. He turns them into custom teaching and learning tools, including diagrams a learner can turn in 3D. The demo below is a short 3D question from a science lesson.",
     steps: [],
     notes: [
       { title: "Bilingual by design", text: "All school activities' language can be changed to practice vocabulary and grammar in the chosen language." },
@@ -393,7 +415,7 @@ const CONTENT = {
 
   learn: {
     kicker: "How learning looks on the app",
-    lead: "A preview only. This is the screen a learner uses for lessons, practice, and progress. No learner name is shown.",
+    lead: "A preview only. This is the screen a learner uses for lessons, practice, and progress.",
     grade: "Grade 5",
     side: ["This Week", "Lessons", "Assessments", "Guidance Sessions", "Calendar", "Progress and Reports", "Resources", "Library"],
     subjects: [
@@ -654,19 +676,13 @@ const CONTENT = {
     { type: "photo", file: "at-the-table.jpg", caption: "Around the table", person: "anuscha" },
     { type: "photo", file: "at-the-grill.jpg", caption: "At the grill", person: "joint" },
     { type: "photo", file: "barbecue.jpg", caption: "Cooking outdoors", person: "joint" },
-    { type: "photo", file: "at-the-screen.jpg", caption: "At the computer", person: "joint" },
-    { type: "photo", file: "playground.jpg", caption: "Outside play", person: "joint" },
     { type: "photo", file: "with-a-calf.jpg", caption: "On the farm", person: "joint" },
     { type: "photo", file: "at-the-fence.jpg", caption: "Meeting the calf", person: "joint" },
     { type: "photo", file: "rafting-group.jpg", caption: "On the river", person: "joint" },
     { type: "photo", file: "anuscha-graduation.jpeg", caption: "Anuscha, B.Ed Foundation Phase", person: "anuscha" },
     { type: "photo", file: "jaco-graduation.jpg", caption: "Jaco, 3D Animation and Visual Effects", person: "jaco" },
     { type: "photo", file: "jaco-archery.jpg", caption: "Sport and discipline, in the field", person: "jaco" },
-    { type: "photo", file: "jaco-boat-dog.jpg", caption: "On the boat, with the dog", person: "jaco" },
-    { type: "photo", file: "jaco-boat-crew.jpg", caption: "In the water beside the boat", person: "jaco" },
     { type: "photo", file: "jaco-mud.jpg", caption: "Through the mud", person: "jaco" },
-    { type: "photo", file: "jaco-obstacle.jpg", caption: "On the obstacle course", person: "jaco" },
-    { type: "photo", file: "jaco-water-net.jpg", caption: "Across the water", person: "jaco" },
     { type: "photo", file: "jaco-snorkel.jpg", caption: "In the sea", person: "jaco" }
   ],
 
@@ -683,7 +699,7 @@ const CONTENT = {
       { label: "Driving permit, Category B, UK & Europe", person: "anuscha" },
       { label: "Police clearance in progress", person: "jaco" },
       { label: "Police clearance in progress", person: "anuscha" },
-      { label: "TEFL in progress", person: "jaco" },
+      { label: "TEFL, 2026", person: "jaco" },
       { label: "TEFL certified", person: "anuscha" },
       { label: "Paediatric First Aid", person: "anuscha" },
       { label: "IB curriculum training", person: "anuscha" },
